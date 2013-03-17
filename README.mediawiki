@@ -1,0 +1,60 @@
+
+== Misc Data Structures ==
+
+This is a Chicken Scheme egg which provides an assortment of data structures.
+
+=== overall ===
+
+This egg contains (or will contain) a few assorted data structures for convenience
+in porting some older Scheme->C code into chicken.
+
+==== zippers ====
+
+:(zipper:initialize tree)
+
+Initializes a zipper with a given tree structure. Currently requires the tree
+to be some nested list data-structure.
+
+:(zipper:descend zipper i)
+
+Descend into branch ''i'', keeping contex in the thread internally.
+
+:(zipper:ascend zipper)
+
+Take a step backwards along your route of descent thus far.
+
+:(zipper:descend-seq zipper seq)
+
+Descend down a tree given a sequence of branch choices.
+
+:(zipper:ascend-n zipper n)
+
+Ascend/Backtrack ''n'' steps.
+
+:(zipper:can-ascend? zipper)
+
+Bounds checking.
+
+:(zipper:ascend-until zipper predicate)
+
+Conditional backtracking.
+
+:(zipper:ascend-height zipper)
+
+=== License ===
+
+   Copyright 2012-2013 Purdue University. All rights reserved.
+
+   Contact Siddharth Narayanaswamy, siddharth@iffsid.com.
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Lesser General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Lesser General Public License for more details.
+   You should have received a copy of the GNU Lesser General Public License
+   along with this program.  If not, see http://www.gnu.org/licenses.
+__NOTOC__

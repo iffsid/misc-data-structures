@@ -1,0 +1,14 @@
+;;;  -*- Hen -*-
+
+((category data)
+ (author "Siddharth Narayanaswamy")
+ (maintainer "Siddharth Narayanaswamy")
+ (license "LGPL")
+ (synopsis "Miscellaneous data structures")
+ (depends setup-helper miscmacros check-errors condition-utils
+          traversal define-structure)
+ (test-depends test)
+ (files "misc-data-structures.meta"
+        "misc-data-structures.release-info"
+        "misc-data-structures.scm"
+        "misc-data-structures.setup"))

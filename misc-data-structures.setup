@@ -1,0 +1,9 @@
+;;;  -*- Hen -*-
+
+(use setup-helper-mod)
+
+(verify-extension-name "misc-data-structures")
+
+(setup-shared-extension-module 'misc-data-structures (extension-version "1.0")
+  #:inline? #t #:types? #t
+  #:compile-options '(-O3 -d2))
